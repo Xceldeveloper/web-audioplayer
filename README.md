@@ -1,6 +1,8 @@
 # Web Audio Player
-### Built with HTML CSS, Vanilla JS and JQuery
 
+[demo url](https://xcelaudioplayer-web.netlify.app/)
+
+### Built with HTML CSS, Vanilla JS 
 ###### controls input
 * Mouse
 * Touch 
