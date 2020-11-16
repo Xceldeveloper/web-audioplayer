@@ -158,6 +158,7 @@ var AudioPlayer = {
     },
 
     onBuffer(callback) {
+        console.log('buffering...')
         this.onBufferListener = callback || function () { }
 
     },
