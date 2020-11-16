@@ -41,45 +41,46 @@
 
 
 
-// ////////////////////////METHODS///////////////can be acced variabe obj.func
-// player.play();
-// player.pause();
-// player.destroy();
+// ////////////////////////METHODS///////////////can be accessed variabe obj.func
+player.play();
+player.pause();
+player.destroy();
 
-// player.skipForward(int..default == 10);
-// player.skipPrevious(int...default == 10);
+player.skipForward(int..default == 10);
+player.skipPrevious(int...default == 10);
 
-// player.setVolume(int < 1 && int > 0)
+player.setVolume(int < 1 && int > 0)
 
 
-// player.mute(Boolean)
-// player.unmute(Boolean)
+player.mute(Boolean)
+player.unmute(Boolean)
 
-// //when player meta data is loaded 
-// player.onReady(function(){
+//when player meta data is loaded 
+player.onReady(function(){
 
-// })
+})
 
-// //when audio is playing
-// player.whenPlaying(function({ duration:'formated duration',time: 'current time in millisecond',percentage:'1 - 100', position:'formaated current position'}){
+//when audio is playing
+player.whenPlaying(function({ duration:'formated duration',time: 'current time in millisecond',percentage:'1 - 100', position:'formaated current position'}){
 
-// })
+})
 
-// //when error occurs
-// player.onError(function(Object){
+//when error occurs
+player.onError(function(Object){
 
-// })
+})
 
-// //when paused
-// player.onPause(function () {
+//when paused
+player.onPause(function () {
 
-// })
-// //when play
-// player.onPlay(function () {
+})
 
-// })
+//when play
+player.onPlay(function () {
+
+})
 
 // //when audio finish playing
-// player.onCompleted(function(){
+player.onCompleted(function(){
 
-// })
+})
