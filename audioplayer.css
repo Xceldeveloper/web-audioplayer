@@ -1,0 +1,159 @@
+  
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .bg {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    #blur-album-art {
+        height: 120vh;
+        width: 185%;
+        -webkit-filter: blur(120px);
+        object-fit: fill;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #blacklayer {
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        z-index: 99;
+    }
+
+    #container {
+        width: 320px;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        padding-bottom: 20px;
+        box-shadow: 0px 1px 10px #000000;
+    }
+
+    #cover {
+        width: 320px;
+        height: 320px;
+        position: relative;
+    }
+
+    #song-thumbnail {
+        width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0px 0px;
+        position: absolute;
+    }
+
+    #duration {
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: rgba(0, 0, 0, 0.3);
+        font-family: sans-serif;
+        padding: 5px 12px;
+        font-size: 14px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    #song-title,
+    #song-artist {
+        display: block;
+        text-align: center;
+        color: white;
+        padding: 20px 0px;
+        padding-top: 30px;
+        font-family: sans-serif;
+        font-size: 17px;
+    }
+
+    #song-artist {
+        color: whitesmoke;
+        font-size: 16px;
+        padding: 0px 0px 10px 0px;
+    }
+
+
+    #controls {
+        margin: 20px 0px;
+    }
+
+    #controls button {
+        width: 20%;
+        padding: 10px 0px;
+        border: none;
+        float: left;
+        font-size: 22px;
+        background-color: inherit;
+        color: white;
+        outline-style: none;
+        cursor: pointer;
+    }
+
+
+
+
+    #seekbar {
+        width: 85%;
+        height: 7px;
+        margin: auto;
+        background-color: inherit;
+        border-radius: 7px;
+        position: relative;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: 10px;
+    }
+
+    #fill {
+        width: 0%;
+        height: 100%;
+        background-color: white;
+        border-radius: 7px;
+        float: left;
+        position: absolute;
+    }
+
+    #seek-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: -7px;
+        float: left;
+    }
+
+    #seek-thumb:hover {
+        width: 17.5px;
+        height: 17.5px;
+        border: 1.5px solid white;
+    }
+
+    #notification-status {
+        position: fixed;
+        width: auto;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        color: white;
+        text-shadow: 2px 2px black;
+        z-index: 100;
+        font-family: sans-serif;
+        display: none;
+    }

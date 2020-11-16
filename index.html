@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- /**
+ * xceldeveloper (ov)
+ * 06/07/2020 - 07/07/2020
+ * 
+
+ */ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player | Designed By Xceldeveloper</title>
+    <link rel="stylesheet" type="text/css" href="audioplayer.css">
+    <link rel="stylesheet" href="materialdesignicons.min.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div id="notification-status">
+    </div>
+
+    <div class="bg">
+        <div id="blacklayer"></div>
+        <img id="blur-album-art" src="logo.jpg">
+    </div>
+
+    <div id="container">
+        <div id="cover">
+            <img alt="Thumbnail" id="song-thumbnail">
+            <div id="duration"> </b></div>
+        </div>
+
+        <span id="song-title"></span>
+        <span id="song-artist"></span>
+
+        <div id="seekbar">
+            <div id="fill"></div>
+            <div id="seek-thumb"></div>
+        </div>
+
+
+
+        <div id="controls">
+            <button id="previous"><span class="mdi mdi-skip-previous"></span></button>
+            <button id="fast-rewind"><span class="mdi mdi-skip-backward"></span></button>
+            <button id="play-pause"><span class="mdi mdi-play"></span></button>
+            <button id="fast-foward"><span class="mdi mdi-skip-forward"></span></button>
+            <button id="next"><span class="mdi mdi-skip-next"></span></button>
+        </div>
+    </div>
+
+    <script src="audioplayer.js"></script>
+
+
+    <script>
+        var SEEKBAR = {
+            fill: document.getElementById('fill'),
+            thumb: document.getElementById('seek-thumb'),
+            container: document.getElementById('seekbar')
+        }
+
+        var Audiox = {
+            thumbnail: document.getElementById('song-thumbnail'),
+            name: document.getElementById('song-title'),
+            artist: document.getElementById('song-artist'),
+            duration: document.getElementById('duration'),
+            previous: document.getElementById('previous'),
+            skipPrev: document.getElementById('fast-rewind'),
+            playPause: document.getElementById('play-pause'),
+            skipFwrd: document.getElementById('fast-foward'),
+            next: document.getElementById('next')
+        }
+
+        var songs = [{
+            name: "Natalie",
+            artist: "Bruno Mars",
+            art: "logo.jpg",
+            path: 'Natalie.mp3'
+        }, {
+            name: "AllTimeLow",
+            artist: "Jon Bellion",
+            art: "logo.jpg",
+            path: 'AllTimeLow.mp3'
+        }
+        ];
+
+
+
+        var player = AudioPlayer;
+
+
+        player.init(songs, SEEKBAR, Audiox)
+        player.onReady(function () {
+
+        });
+
+        player.onCompleted(function () {
+            player.controls.playPause.innerHTML = '<span class="mdi mdi-play"></span>'
+        })
+
+
+
+
+
+
+        SEEKBAR.container.addEventListener('click', function (e) {
+            var el = this;
+            var scrubTime = (e.offsetX / el.clientWidth) * player.totalTime;
+            player.skipTo(scrubTime)
+        })
+
+
+
+
+
+    </script>
+</body>
