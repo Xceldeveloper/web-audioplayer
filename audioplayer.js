@@ -202,8 +202,8 @@ var AudioPlayer = {
 
     setButtonlistensers(){
        this.controls.playPause.addEventListener('click', ()=> {
-       
-            if (this.player.isPlaying) {
+       console.log('pressed')
+            if (this.isPlaying) {
                 this.pause();
             } else {
                 this.play();
@@ -235,8 +235,8 @@ var AudioPlayer = {
         document.addEventListener('keydown',(event)=>{
             if (event.keyCode == 32) { 
        
-                if (this.player.isPlaying) {
-                    this.pause();
+                if (this.isPlaying) {
+                    this.pause();  
                 } else {
                     this.play();
                 }
