@@ -1,7 +1,7 @@
 # Web Audio Player
 
 ## Screenshot 
-[screnshot](screenshot.png)
+[screenshot](screenshot.png)
 
 
 [demo url](https://xcelaudioplayer-web.netlify.app/)
