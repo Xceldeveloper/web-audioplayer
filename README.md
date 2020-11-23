@@ -1,6 +1,11 @@
 # Web Audio Player
 
+## Screenshot 
+[screnshot](screenshot.png)
+
+
 [demo url](https://xcelaudioplayer-web.netlify.app/)
+[developer's website](https://xceldeveloper.com)
 
 ### Built with HTML CSS, Vanilla JS 
 ###### controls input
